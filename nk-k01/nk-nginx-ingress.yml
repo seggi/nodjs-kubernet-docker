@@ -4,11 +4,8 @@ metadata:
   name: nk-express-ingress
   namespace: staging
   annotations:
-    # nginx.ingress.kubernetes.io/use-regex: "true"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$2
-    # kubernetes.io/ingress.class: "nginx"
-    # nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
   labels:
     name: nk-express-ingress
 spec: 
