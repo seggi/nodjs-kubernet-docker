@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  nk-k02:
+  - apiVersion: v2
+    appVersion: v1
+    created: "2021-09-06T18:11:23.364365177-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 159c2ec49575981c080a172f9ed90564035f89fa9feac03a23f3a95cb30ff693
+    name: nk-k02
+    type: application
+    urls:
+    - https://github.com/seggi/nodjs-kubernet-docker.git/nk-k02-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-09-06T18:11:23.36355028-04:00"
