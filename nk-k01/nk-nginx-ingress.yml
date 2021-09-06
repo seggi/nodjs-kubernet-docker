@@ -26,13 +26,13 @@ spec:
             port: 
               number: 5000
 
-      - pathType: Prefix
-        path: /auths(/|$)(.*)
-        backend:
-          service:
-            name: nk-express
-            port:
-             number: 3000
+      # - pathType: Prefix
+      #   path: /auths(/|$)(.*)
+      #   backend:
+      #     service:
+      #       name: nk-express
+      #       port:
+      #        number: 3000
 
 # For multiple urls just use / to refer to your services urls
   
