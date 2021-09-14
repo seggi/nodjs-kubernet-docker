@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nk-express-books
+  labels:
+    app: nk-express-books
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nk-express-books
+  template:
+    metadata:
+      labels:
+        app: nk-express-books
+    spec:
+    #   imagePullSecrets:
+    #   - name: nk-registry-key
+      containers:
+      - name: nk-helm-kube
+        image: nankim/nk-express-book
+        imagePullPolicy: Always
+        ports:
+        - name: default
+          containerPort: 5000
+        resources:
+          requests:
+            memory: 64Mi
+            cpu: 100m
+          limits:
+            memory: 128Mi
+            cpu: 300m
+     

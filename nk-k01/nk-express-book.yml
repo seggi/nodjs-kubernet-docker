@@ -15,15 +15,27 @@ spec:
       labels:
         app: nk-express-books
     spec:
-      imagePullSecrets:
-      - name: nk-registry-key
+      # imagePullSecrets:
+      # - name: nk-registry-key                      
       containers:
       - name: nk-helm-kube
-        image: nankim001.azurecr.io/nk-helm-kube:latest
-        imagePullPolicy: Always
+        image: nankim/nk-express-book
+        # imagePullPolicy: Always
+        # env:
+        #   - name: SECRET_USERNAME
+        #     valueFrom:
+        #       secretKeyRef:
+        #         key: username
+        #         name: mysecret
+          
+        #   - name: SECRET_PASSWORD
+        #     valueFrom:
+        #       secretKeyRef:
+        #         key: password 
+        #         name: mysecret
         ports:
-        - name: default
-          containerPort: 5000
+        # - name: default
+          - containerPort: 5000
         resources:
           requests:
             memory: 64Mi
@@ -31,7 +43,7 @@ spec:
           limits:
             memory: 128Mi
             cpu: 300m
-     
+      # restartPolicy: Never
       
 ---
 apiVersion: v1
@@ -45,6 +57,6 @@ spec:
   ports:
   - protocol: TCP
     port: 5000
-    # targetPort: 5000
+    targetPort: 5000
     name: http
   type: LoadBalancer

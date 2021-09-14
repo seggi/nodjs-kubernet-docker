@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nk-express-auther
+  labels:
+    app: nk-express-auther
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nk-express-auther
+  template:
+    metadata:
+      labels:
+        app: nk-express-auther
+    spec:
+      containers:
+      - name: nk-helm-kube
+        image: nankim/nk-react
+        imagePullPolicy: Always
+        ports:
+        - name: default
+          containerPort: 5000
+        resources:
+          requests:
+            memory: 64Mi
+            cpu: 100m
+          limits:
+            memory: 128Mi
+            cpu: 300m
+     
