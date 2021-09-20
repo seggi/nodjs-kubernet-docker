@@ -1,12 +1,11 @@
-name: DevOps CI
+name: DevOps CI-CD
 on:
   push:
     branches: [ main ]
 jobs:
-  build:
+  build_test:
     runs-on: ubuntu-latest
     steps:
-      - name: npm install
       - uses: actions/checkout@main
       
   
