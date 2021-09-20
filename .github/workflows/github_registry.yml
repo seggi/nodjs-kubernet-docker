@@ -19,11 +19,11 @@ jobs:
           npm install
           npm ci
           
-      # Build and test the apps
-      - name: build
-        run: |
-          npm run build
-          npm run test
+#       # Build and test the apps
+#       - name: build
+#         run: |
+#           npm run build
+#           npm run test
 
 #   push_to_Docker_hub:
 #     runs-on: ubuntu-latest
