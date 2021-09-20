@@ -29,11 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     # build docker image and push to docker hub
     # The image will be build only if the app build and test successfully
-#     needs: [build_test]
+    needs: [build_test]
     
-#     steps:
-#       - name: checkout repo
-#         uses: actions/checkout@v2
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
         
 #       - name: Set up nankim
 #         uses: docker/setup-buildx-action@v1
