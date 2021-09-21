@@ -20,12 +20,6 @@ CMD [ "npm",  "run", "start" ]
 FROM dev AS audit 
 RUN npm audit 
 
-FROM lint AS lint 
-RUN npm run lint 
-
-FROM lint AS test
-RUN npm test
-
 #Build
 FROM test AS build
 RUN npm run build \
