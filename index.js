@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
  
 app.get("/delete", (req, res) => {
-  res.send("Delete all users");
+  res.send("Delete all users from database");
 });
  
 app.get("/update", (req, res) => {
