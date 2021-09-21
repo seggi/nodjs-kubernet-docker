@@ -44,13 +44,14 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           
-      - name: Build and push
+      - name: Build and push Docker image
+        id: docker_build
         uses: docker/build-push-action@v2
-        with:
-          context: ./
-          file: .Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nknode:latest
+#         with:
+#           context: ./
+#           file: .Dockerfile
+#           push: true
+#           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nknode:latest
       
 #       - name: Run the image in a container
 #         uses: addnab/docker-run-action@v3
