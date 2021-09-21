@@ -6,7 +6,10 @@ on:
     branches: [ main ]
 jobs:
   build_test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+     matrix: 
+      os: [ubuntu-latest, windows-latest, macOs-latest]
     steps:
       - uses: actions/checkout@main
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

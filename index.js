@@ -14,7 +14,7 @@ app.get("/delete", (req, res) => {
 });
  
 app.get("/update", (req, res) => {
-  res.send("Update User");
+  res.send("Update User from database");
 });
  
 app.get("/insert", (req, res) => {
