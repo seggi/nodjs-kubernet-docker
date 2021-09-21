@@ -21,7 +21,6 @@ FROM dev AS audit
 RUN npm audit 
 
 #Build
-FROM test AS build
 RUN npm run build \
   && nom ci --prefer-offline --prod
   
