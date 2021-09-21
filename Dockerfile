@@ -16,10 +16,6 @@ COPY . .
 EXPOSE 3000
 CMD [ "npm",  "run", "start" ]
 
-# Audit
-FROM dev AS audit 
-RUN npm audit 
-
 #Build
 RUN npm run build \
   && nom ci --prefer-offline --prod
