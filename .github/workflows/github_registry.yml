@@ -2,6 +2,8 @@ name: DevOps CI-CD
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   build_test:
     runs-on: ubuntu-latest
